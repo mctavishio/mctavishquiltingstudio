@@ -1,0 +1,435 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Colors  */
+:root {
+    --gray: #3e3d3d;
+    --graydark: #343232;
+    --graylight: #d7d6d6;
+    --gray: hsl(0, 1%, 24%);
+    --graydark: hsl(0, 1%, 20%);
+    --graylight: hsl(0, 1%, 64%);
+    --black: hsl(0, 1%, 10%);
+    --white: #ffffff;
+    --white: hsl(0, 0%, 100%);
+    --vimeoblue: #1372C4;
+    --vimeobrown: #1c1c17;
+    --blue: #1372C4;
+    --blue: #226bb4;
+    --blue: hsl(210, 68%, 42%);
+    --bluedeep: hsl(210, 88%, 48%);
+    --bluelight: hsl(210, 88%, 68%);
+    --orange: #c84419;
+    --orange: hsl(15, 78%, 44%);
+    --sans: Helvetica, Verdana, Arial, Tahoma, 'Trebuchet MS', sans-serif;
+
+    --onecolor: var(--graydark); 
+    --twocolor: var(--gray); 
+	--navlinkcolor: var(--gray);  
+    --linkcolor: var(--blue); 
+    --linkhovercolor: var(--orange); 
+    --linkactivecolor: var(--orange); 
+    --onebgcolor: var(--white);
+    --twobgcolor: var(--white);
+	--btnbgcolor: var(--blue);
+	--btncolor: var(--white);
+    --emcolor: var(--orange); 
+  }
+
+
+:root {
+  /* type scale from https://www.rawkblog.com/2018/05/modular-scale-typography-with-css-variables-and-sass/ */
+  --font-size: 100%; 
+  --ratio: 1.3;
+
+  /* at some point incorporate this https://www.smashingmagazine.com/2018/05/css-custom-properties-strategy-guide/ */
+
+/* Calculate values */
+--h4: calc(var(--font-size) * var(--ratio));
+--h3: calc(var(--h4) * var(--ratio));
+--h2: calc(var(--h3) * var(--ratio));
+--h1: calc(var(--h2) * var(--ratio));
+}
+
+/* Typography, A-Z */
+
+
+
+address {
+    font-style: normal;
+    margin-bottom:2rem;
+}
+address > ul {
+  list-style: none;
+    padding-left: 0;
+}
+address > ul > li {
+  margin-top: 1rem;
+}
+
+em {
+  color: var(--emcolor);
+  font-style: italic;
+  font-weight: bold;
+  padding-left: 1em;
+  text-transform: uppercase;
+}
+
+ul.breadcrumb {
+  list-style: none;
+  padding: 0; margin: 0;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  padding-right: 2rem;
+  text-transform: lowercase;
+}
+
+ul.breadcrumb li+li:before {
+  padding-right: 2rem;
+  color: var(--graylight);
+  font-weight: bold;
+  content: " > ";
+}
+
+.apqs {
+  text-transform: uppercase;
+}
+
+blockquote {
+  /* font-family: 'Nunito', sans-serif;   */
+    font-size: 1rem; 
+    font-style: normal;
+    /*max-width: 55ch;*/
+    margin-left:1rem;
+    margin-right:1rem;
+    margin: 1.6rem;
+ }
+ 
+body {
+    font-family: var(--sans);
+    color: var(--onecolor);
+    line-height: 1.6em;
+}
+
+figcaption {
+  /*margin-top:.5rem;*/
+  font-size: 100%;
+  padding-bottom:1rem;
+  padding:1rem;
+}
+
+
+h1, h2, h3 {
+  text-transform: lowercase;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: 100;
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: 100;
+  line-height: 1.2;
+/*  margin-top: 1em;
+  margin-bottom: .5em; */
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: 100;
+  margin-bottom: 0;
+  margin-top: 1em;
+  text-transform: lowercase;
+}
+
+
+
+
+p {
+   font-size: var(--font-size);
+    /*max-width: 70ch; */
+    /*line-height: 130%;*/
+}
+
+
+blockquote {
+  margin-top: 0.25em ;
+  margin-bottom: 1em;
+  position: relative;
+  }
+   
+
+/*blockquote cite {
+  display: block;
+  margin-top: .8em;
+  font-size: 1rem; 
+  font-style: normal;
+}*/
+cite {
+  font-style: italic;
+}
+
+
+body {
+    background-color: var(--onebgcolor);
+    color: var(--onecolor);
+}
+
+
+.collection-item {
+  /* This class on collection page is no longer in use; formerly used it when grid was used on this page. may be useful going forward. */
+}
+
+
+/* Used on all items on the collection page except for the first, to add space */
+.collection-item-2-plus {
+  margin-top: 2.5em;
+}
+
+
+/* collection-item used on shop videos page  */
+.collection-item-title {
+  margin-top: .5em;
+  /* margin-bottom: 3em; */
+}
+
+/* contact_link is used in footer */
+.contact__link {
+    font-weight:bold;
+    color: var(--onecolor); 
+    color: var(--linkcolor); 
+}
+
+.container {
+  width: 80%; 
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.headergrid {
+  max-width: 100%;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  /*align-content: center;*/
+  align-items: center;
+  justify-items: left;
+  margin-top:3rem;
+}
+@media (max-width: 800px) {
+	.headergrid {
+		display: block;
+	}
+}
+
+.sociallinks {
+  max-width: 100%;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /*align-content: center;*/
+  align-items: center;
+  justify-items: center;
+  margin-top:3rem;
+}
+body footer svg.socialicon {
+  max-width: 60px;
+  align-content: center;
+}
+footer ul   {
+    list-style: none;
+    padding-left: 0;
+}
+header, footer {
+    background-color: var(--twobgcolor);
+    color: var(--twocolor);
+    fill: var(--twocolor);
+    margin-bottom: 2.5em;
+    padding: 2em 1em;
+	border-bottom-style: dashed;
+	border-bottom-color: var(--blue);
+	border-bottom-width: 4px;
+    text-transform: lowercase; 
+}
+footer {
+    background-color: var(--twobgcolor);
+    color: var(--twocolor);
+    margin-top: 2.5em;
+    padding: 2em 1em;
+	border-top-style: dashed;
+	border-top-color: var(--blue);
+	border-top-width: 4px;
+    text-transform: lowercase; 
+}
+body header h1 span.logoamp {
+	display: inline-block;
+	padding: 0.4em;
+	background-color: var(--blue);
+	color: var(--white);
+}
+body header h1 {
+	line-height:1.4em;
+	text-align:right;
+	min-width:100%;
+	padding: 0.6em;
+	background-color: var(--white);
+	color: var(--blue);
+	background-color: var(--blue);
+	color: var(--white);
+	margin-top:0;
+}
+body header h1 a {
+	font-weight:300;
+	color: var(--blue);
+}
+
+.hero h1 {
+  margin-bottom: 0;
+}
+
+.hero figure {
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+figure {
+  display:inline-block;
+  vertical-align:top;
+  max-width: 900px;
+}
+picture, img {
+  vertical-align:middle;
+  max-width: 100%;
+  margin: auto;
+}
+
+
+div.vimeowrapper16x9 {
+  position: relative;
+  /*max-width : 1280px;*/
+  padding-bottom: 56.25%; /* 16:9 */
+  /*padding-top: 25px;*/
+  height: 0;
+}
+div.vimeowrapper16x9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.product {
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.subcaption {
+  font-size:1.2rem;
+}
+
+
+nav > ul {
+  margin: 0;
+  padding: .5em;
+}
+
+nav > ul > li {
+  text-transform: lowercase; 
+  font-weight: 300;
+  list-style: none;
+}
+
+a {
+  font-weight: 700;
+  color: var(--linkcolor); 
+  fill: var(--linkcolor); 
+}
+
+a:hover,
+a:focus {
+    color: var(--linkhovercolor);
+    fill: var(--linkhovercolor);
+    /*text-decoration: underline solid 3px var(--white);*/
+}
+a.active {
+	color: var(--linkactivecolor);
+}
+.btn {  
+  padding: .4em;
+  margin: .4em;
+  font-size: 80%;
+  text-transform: uppercase; 
+  font-weight: 600;
+  /*background-color: var(--blue);*/
+  background-color: var(--btnbgcolor);
+  color: var(--btncolor);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  cursor:pointer;
+  display: inline-block;
+  padding: 1em 3em;
+  /* margin-top: 1em; */
+  /*border: 1px solid var(--blue);*/
+  text-decoration: none;
+  margin: 1em;
+  margin-left: 0em;
+  /*margin-right: 1.5em;
+  margin-bottom: 1em;*/
+}
+
+
+.btn:hover,
+.btn:focus {
+  color: var(--white);
+  background-color: var(--graydark);
+  text-decoration: none;
+
+}
+
+nav > ul > li > a {
+  color: var(--navlinkcolor);
+  text-decoration: none;
+  font-weight:bold;
+  line-height: 2.2rem;
+}
+
+nav > ul > li:before {
+  content: "• "; 
+  font-size: 2em;
+  font-weight: bold; 
+  color: var(--blue);
+}
+
+/*nav > ul > li:hover:before {
+  content: "-  "; 
+  font-weight: bold; 
+  display: inline-block;
+  width: 2em; 
+  margin-left: -2em; 
+  color: var(--white);
+}*/
+
+
+/* for ul that holds metadata on product detail page */
+.product-data {
+  list-style: none;
+}
+
+/* for span within li that holds specific metadata on product detail page */
+.product-data-item {
+  font-weight: bold;
+}
+
+.no-bullet 
+{
+    list-style: none;
+    padding-left: 0;
+}
