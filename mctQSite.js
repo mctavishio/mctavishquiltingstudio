@@ -1,6 +1,8 @@
+module.exports = [
+	{
+		title: "home"
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,7 +117,7 @@
 				<li><a href="services.html">Quilting services</a></li>
 				<li><a href="rentals.html">Machine rentals & certification</a></li>
 				<li><a href="apqs.html"><span class="apqs">APQS</span> sales & service</a></li>
-				<li><a href="online-learning.html">Online learning</a></li>
+				<li><a href="online-learning.html">Courses</a></li>
 				<li><a href="meet-karen.html">About Karen McTavish</a></li>
 				<li><a href="meet-cheryl.html">About Cheryl Dennison</a></li>
 				<li><a href="meet-kathy.html">About Kathy McTavish</a></li>
@@ -144,8 +146,7 @@ and updates from us. Get $5 off your next purchase.
                     Duluth MN 55812
                 </li>
                 <li>
-					Monday closed<br/>
-                    Tuesday&ndash;Friday: 9am&ndash;4pm<br/>
+                    Monday&ndash;Friday: 9am&ndash;4pm<br/>
 					Saturday: 10am&ndash;3pm<br/>
 					Sunday closed
                 </li>
