@@ -25,16 +25,14 @@
     --bluelight: hsl(210, 88%, 68%);
     --orange: #c84419;
     --yellow: #fce174;
-	--paleyellow: #ffffed;
     --orange: hsl(15, 78%, 44%);
-	--orange: #c84419;
     --sans: Helvetica, Verdana, Arial, Tahoma, 'Trebuchet MS', sans-serif;
 
     --onebgcolor: var(--graydark); 
     --twobgcolor: var(--gray); 
 	--navlinkcolor: var(--white);  
-    --linkcolor: var(--paleyellow); 
-    --linkhovercolor: var(--yellow); 
+    --linkcolor: var(--blue); 
+    --linkhovercolor: var(--orange); 
     --linkactivecolor: var(--orange); 
     --onecolor: var(--white);
     --twocolor: var(--white);
@@ -87,7 +85,7 @@ ul.breadcrumb {
 ul.breadcrumb li {
   display: inline;
   padding-right: 2rem;
-  /* text-transform: lowercase;*/
+  text-transform: lowercase;
 }
 
 ul.breadcrumb li+li:before {
@@ -126,7 +124,7 @@ figcaption {
 
 
 h1, h2, h3 {
-  /* text-transform: lowercase;*/
+  text-transform: lowercase;
 }
 
 h1 {
@@ -148,7 +146,7 @@ h3 {
   font-weight: 100;
   margin-bottom: 0;
   margin-top: 1em;
-  /* text-transform: lowercase;*/
+  text-transform: lowercase;
 }
 
 
@@ -257,7 +255,7 @@ header {
     margin-bottom: 2.5em;
     padding: 2em 1em;
     padding: 1em 1em;
-  /* text-transform: lowercase;*/
+  	text-transform: lowercase;
   	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 footer {
@@ -266,7 +264,7 @@ footer {
     margin-top: 2.5em;
     padding: 2em 1em;
     padding: 1em 1em;
-  /* text-transform: lowercase;*/
+    text-transform: lowercase; 
   	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 main {
@@ -287,7 +285,6 @@ body header h1 {
 	font-size: var(--titleh1);
 	line-height:1.4em;
 	text-align:right;
-	text-align:left;
 	min-width:100%;
 	padding: 0.6em;
 	background-color: var(--white);
@@ -351,17 +348,14 @@ div.product {
 .subcaption {
   font-size:1.2rem;
 }
-ul {
-	padding-inline-start: 0.2em;
-	margin-block-start: 0.2em;
-}
+
 nav > ul {
   margin: 0;
-  padding: .4em;
+  padding: .5em;
 }
 
 nav > ul > li {
-  /* text-transform: lowercase;*/
+  text-transform: lowercase; 
   font-weight: 300;
   list-style: none;
 }
@@ -370,8 +364,6 @@ a {
   font-weight: 700;
   color: var(--linkcolor); 
   fill: var(--linkcolor); 
-  text-decoration: underline;
-  text-decoration-color: var(--yellow);
 }
 
 a:hover,
