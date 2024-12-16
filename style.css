@@ -440,6 +440,11 @@ nav > ul > li.active:after {
   color: var(--orange);
 }
 
+hr {
+  border: 8px solid var(--yellow);
+  border-radius: 4px;
+}
+
 /*nav > ul > li:hover:before {
   content: "-  "; 
   font-weight: bold; 
