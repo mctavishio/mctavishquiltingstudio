@@ -235,7 +235,7 @@ body {
   max-width: 100%;
   display: grid;
   gap: 2px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   /*align-content: center;*/
   align-items: center;
   justify-items: center;
